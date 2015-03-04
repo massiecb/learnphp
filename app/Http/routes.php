@@ -13,7 +13,19 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
+Route::get('/post', function(){
+		    return "Posting page";
+});
+Route::get('/history', function(){
+		    return "View History page";
+});
+Route::get('/user_create', function (){
+			   return "User signup";
+});
+Route::get('/user_edit', function(){
+			 return 'User edit';
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
